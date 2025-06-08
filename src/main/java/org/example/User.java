@@ -45,7 +45,6 @@ public class User {
         this.cards = cards;
     }
 
-
 //проверяет корректность адреса электронной почты
     public boolean emailValidation(String email) {
         if (email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$")) return true;
@@ -56,7 +55,7 @@ public class User {
         if (card.matches("^(\\d{4}[ -]?){3}\\d{4}$|^\\d{16}$")) return true;
         throw new IllegalArgumentException("The card number was entered incorrectly!!");
     }
-//привязывает новую карту к аккаунту (максимальное количество привязанных карт - 3)))
+//привязывает новую карту к аккаунту (максимальное количество привязанных карт - 3)
     public boolean addCard (String card) {
         if (cardValidation(card) && cards.size() < 3) {
             cards.add(card);
