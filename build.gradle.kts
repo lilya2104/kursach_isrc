@@ -21,6 +21,14 @@ tasks.test {
 
 publishing {
     publications {
-        from components.java
+        myLibrary(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            name = 'kursach_isrc'
+        }
     }
 }
