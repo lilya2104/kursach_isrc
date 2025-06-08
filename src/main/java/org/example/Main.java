@@ -72,12 +72,13 @@ public class Main {
             }
         }
     }
-
+//проверяет корректность номера телефона
     public static boolean numberValidation(String number) {
         if (number.matches("^(\\+?7|8)\\s?(\\(?\\d{3}\\)?|\\d{3})\\s?\\d{3}[-\\s]?\\d{2}[-\\s]?\\d{2}$"))
             return true;
         return false;
     }
+//приводит номер к одному формату
     public static String numberRedact(String number) {
         if (numberValidation(number)) {
             number = number.replaceAll("[\\s()\\-]", "");
@@ -88,6 +89,7 @@ public class Main {
         }
         return null;
     }
+//проверяет код с sms (для примера взят код 0987)
     public static boolean numSmsValid(String numSMS) {
         if (numSMS.equals("0987")) return true;
         return false;
