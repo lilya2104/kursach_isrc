@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    id("maven-publish")
 }
 
 group = "org.example"
@@ -22,6 +23,12 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
+        }
+    }
+    repositories {
+        maven {
+            name = 'kursach_isrc'
+            url = layout.buildDirectory.dir("kursach_isrc")
         }
     }
 }
