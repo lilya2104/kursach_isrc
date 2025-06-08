@@ -21,14 +21,14 @@ tasks.test {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            from components.java
+        create<MavenPublication>("mavenJava") {
+            from(components["java"])
         }
     }
     repositories {
         maven {
-            name = 'kursach_isrc'
-            url = layout.buildDirectory.dir("kursach_isrc")
+            name = "kursach_isrc"
+            url = uri("https://github.com/lilya2104/kursach_isrc.git")
         }
     }
 }
