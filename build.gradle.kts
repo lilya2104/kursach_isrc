@@ -21,8 +21,6 @@ tasks.test {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
+        from components.java
     }
 }
