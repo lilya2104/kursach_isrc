@@ -28,7 +28,7 @@ publishing {
     repositories {
         maven {
             name = "kursach_isrc"
-            url = uri("https://github.com/lilya2104/kursach_isrc.git")
+            url = uri(layout.buildDirectory.dir("repo"))
         }
     }
 }
