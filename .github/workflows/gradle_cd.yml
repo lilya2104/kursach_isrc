@@ -24,13 +24,13 @@ jobs:
       uses: gradle/actions/setup-gradle@v4.0.0
 
     - name: Build with Gradle Wrapper
-      run: ./gradlew build
+      run: bash gradlew build
 
     - name: Run tests
-      run: ./gradlew test
+      run: bash gradlew test
 
     - name: Publish to GitHub Packages
-      run: ./gradlew publish
+      run: bash gradlew publish
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
